@@ -1,0 +1,60 @@
+/*
+       *        *
+       **      **
+       ***    ***
+       ****  ****
+       **********
+       ****  ****
+       ***    ***
+       **      **
+       *        *
+*/
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	cout<<"Enter n";
+	cin>>n;
+	int i=1;
+	while(i<=n){
+		int j=1;
+		while(j<=i){
+			cout<<"*";
+			j++;
+		}
+		int spaces=1;
+		while(spaces<=(2*n)-(2*i)){
+			cout<<" ";
+			spaces++;
+		}
+		j=1;
+		while(j<=i){
+			cout<<"*";
+			j++;
+		}
+		cout<<endl;
+		i++;
+	}
+	i=1; int val=n-1;
+	while(i<=n){
+		int j=1;
+		while(j<=val){
+			cout<<"*";
+			j++;
+		}
+		int spaces=1;
+		while(spaces<=2*i){
+			cout<<" ";
+			spaces++;
+		}
+		j=1;
+		while(j<=val){
+			cout<<"*";
+			j++;
+		}
+		cout<<endl;
+		i++;
+		val--;
+	}
+}
