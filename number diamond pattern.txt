@@ -1,0 +1,58 @@
+/* pattern for n=4
+         1
+        212
+       32123
+      4321234
+       32123
+        212
+         1
+*/
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	cout<<"Enter n";
+	cin>>n;
+	int i=1,j;
+	while(i<=n){
+		int spaces=1;
+		while(spaces<=n-i){
+			cout<<" ";
+			spaces++;
+		}
+	    j=i;
+		while(j>=1){
+			cout<<j;
+			j--;
+		}
+		j=1; int col=2;
+		while(j<=i-1){
+			cout<<col;
+			col++;
+			j++;
+		}
+		cout<<endl;
+		i++;
+	}
+	i=1;
+	while(i<=n){
+		int spaces=1;
+		while(spaces<=i){
+			cout<<" ";
+			spaces++;
+		}
+		int j=n-i;
+		while(j>=1){
+			cout<<j;
+			j--;
+		}
+		j=n-i; int col=2;
+		while(col<=j){
+			cout<<col;
+			col++;
+		}
+		cout<<endl;
+		i++;
+	}
+}
